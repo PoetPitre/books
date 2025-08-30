@@ -1,10 +1,9 @@
 /*
     Color Palette:
-    - Background: #FFFFFF (white)
-    - Light Background: #f8f9fa (very light grey)
-    - Text: #333 (dark grey)
-    - Primary/Accent: #2c3e50 (dark slate blue)
-    - Button: #007bff (vibrant blue)
+    - Black: #000000
+    - White: #FFFFFF
+    - Charcoal Gray: #333333
+    - Royal Blue Accent: #0052cc
 */
 
 /* Basic Styles */
@@ -13,33 +12,52 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     color: #333;
     line-height: 1.6;
+    background-color: #FFFFFF;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    color: #2c3e50;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Background Colors */
+.bg-white {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+.bg-dark {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.bg-dark h2 {
+    color: #FFFFFF;
 }
 
 /* Header */
-header {
-    background-color: #fff;
+.main-header {
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 nav {
@@ -49,9 +67,10 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #FFFFFF;
+    font-family: 'Lora', serif;
 }
 
 nav ul {
@@ -62,144 +81,205 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 1.5rem;
+    margin-left: 2rem;
 }
 
 nav ul li a {
     font-size: 1rem;
-    color: #333;
+    color: #FFFFFF;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+    color: #0052cc;
 }
 
-/* Sections */
-section {
-    padding: 4rem 0;
+/* Content Section */
+.content-section {
+    padding: 6rem 0;
 }
 
-/* Home Section */
-#home {
-    background-color: #f8f9fa;
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('https://i.ibb.co/6gBsC4B/aaa-author-workspace.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
 }
 
-.home-content {
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.hero-content .subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* About Section */
+.about-content {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
 }
 
-.author-photo {
-    flex: 1;
-    max-width: 300px;
-}
-
-.author-photo img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.author-bio {
+.about-text {
     flex: 2;
 }
 
-/* Books Section */
+.about-photo {
+    flex: 1;
+}
+
+.about-photo img {
+    width: 100%;
+    filter: grayscale(100%);
+    border-radius: 8px;
+}
+
+.signature {
+    margin-top: 2rem;
+    width: 200px;
+    height: auto;
+}
+
+/* Book Showcase Section */
+.book-showcase-section {
+    position: relative;
+}
+
 .book-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
 }
 
 .book-item {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
 }
 
 .book-item img {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transform: perspective(1000px) rotateY(-15deg);
+    transition: transform 0.3s ease;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
+}
+
+.book-item:hover img {
+    transform: perspective(1000px) rotateY(0deg);
 }
 
 .book-item h3 {
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
 }
 
 .btn {
     display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 0.8rem 2rem;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid #333333;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #0052cc;
+    border-color: #0052cc;
 }
 
-/* About/Awards Section */
-#about {
-    background-color: #f8f9fa;
+/* Particles.js background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
+
+/* Testimonials Section */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.testimonial-item {
+    border-left: 4px solid #0052cc;
+    padding-left: 2rem;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.testimonial-item cite {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Awards Section */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .gallery img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 3px solid #FFFFFF;
 }
 
-/* Contact Section */
-#contact {
-    text-align: center;
+/* Social Media Section */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
-#contact a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
+.social-item img {
+    width: 100%;
+    height: auto;
 }
 
 /* Footer */
-footer {
-    background-color: #2c3e50;
-    color: #fff;
+.main-footer {
+    background-color: #000000;
+    color: #FFFFFF;
     text-align: center;
-    padding: 1.5rem 0;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .home-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        display: none; /* Simple hiding for now, can be improved with a hamburger menu */
-    }
-
-    .logo {
-        text-align: center;
-        width: 100%;
-    }
+    padding: 2rem 0;
 }
