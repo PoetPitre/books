@@ -265,15 +265,8 @@ nav ul li a:hover {
 }
 
 /* Social Media Section */
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-}
-
-.social-item img {
-    width: 100%;
-    height: auto;
+.social-links {
+    text-align: center;
 }
 
 /* Footer */
