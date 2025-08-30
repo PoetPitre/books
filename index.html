@@ -3,86 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephanie P. Kirk</title>
+    <title>Stephanie P. Kirk - Author</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Stephanie P. Kirk</div>
+
+    <header class="main-header">
+        <nav class="container">
+            <div class="logo">SPK</div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#books">Books</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#social">Social</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="container">
-            <div class="home-content">
-                <div class="author-photo">
-                    <img src="https://i.ibb.co/DHXbBm0Q/aaa496944280-3715363958608635-8536620574682671310-n.jpg" alt="Stephanie P. Kirk">
-                </div>
-                <div class="author-bio">
-                    <h2>About the Author</h2>
-                    <p>
-                        Stephanie P. Kirk is a digital creator and author. She has been working as an Instructor since 2013.
-                        She studied at Regent University (Class of 1991) and Southern University (1984-1987). She graduated from Opelousas Senior High School in 1984.
-                        Born on May 24, 1966, Stephanie is a passionate writer and educator.
-                    </p>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Stephanie P. Kirk</h1>
+                <p class="subtitle">Award-Winning Author & Digital Creator</p>
+            </div>
+        </section>
+
+        <!-- About the Author Section -->
+        <section id="about" class="about-section content-section bg-white">
+            <div class="container">
+                <h2>About the Author</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Stephanie P. Kirk is a digital creator and author. She has been working as an Instructor since 2013. She studied at Regent University (Class of 1991) and Southern University (1984-1987). She graduated from Opelousas Senior High School in 1984. Born on May 24, 1966, Stephanie is a passionate writer and educator.</p>
+                        <img src="https://via.placeholder.com/200x50.png?text=Signature" alt="Signature" class="signature">
+                    </div>
+                    <div class="about-photo">
+                        <img src="https://i.ibb.co/DHXbBm0Q/aaa496944280-3715363958608635-8536620574682671310-n.jpg" alt="Stephanie P. Kirk">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="books" class="container">
-            <h2>Books</h2>
-            <div class="book-list">
-                <div class="book-item">
-                    <img src="https://i.ibb.co/3yDsB87w/aaa-IMG-20250829-124346.jpg" alt="Running on Empty">
-                    <h3>Running on Empty</h3>
-                    <a href="https://www.amazon.com/dp/1491854960" target="_blank" class="btn">Buy on Amazon</a>
+        <!-- Book Showcase Section -->
+        <section id="books" class="book-showcase-section content-section bg-dark">
+            <div class="container">
+                <h2>My Books</h2>
+                <div class="book-list">
+                    <div class="book-item">
+                        <img src="https://i.ibb.co/kVxmcKDh/aaa41-UWNz0-bi-L.jpg" alt="Pandemic">
+                        <h3>Pandemic</h3>
+                        <a href="https://www.amazon.com/Pandemic-Royal-Writers-Guild-Cenla/dp/1946826480/ref=sr_1_2?dib=eyJ2IjoiMSJ9.jXr7tr2rBVdjpxPokgan1zjkCrp1xTMmIw6u_v_QOdw.hjGbmil5iar6ZFHe6yWRIKYiiPbH4riN-j0BaqUjCsg&dib_tag=se&qid=1756496053&refinements=p_27%3AStephanie+Pitre-Kirk&s=books&sr=1-2&text=Stephanie+Pitre-Kirk" target="_blank" class="btn">Buy Now</a>
+                    </div>
+                    <div class="book-item">
+                        <img src="https://i.ibb.co/3yDsB87w/aaa-IMG-20250829-124346.jpg" alt="Running on Empty">
+                        <h3>Running on Empty</h3>
+                        <a href="https://www.amazon.com/dp/1491854960" target="_blank" class="btn">Buy Now</a>
+                    </div>
+                    <div class="book-item">
+                        <img src="https://i.ibb.co/MygMtfvN/aaa-IMG-20250829-124405.jpg" alt="Fill My Cup">
+                        <h3>Fill My Cup</h3>
+                        <a href="https://www.amazon.com/dp/1665521295" target="_blank" class="btn">Buy Now</a>
+                    </div>
                 </div>
-                <div class="book-item">
-                    <img src="https://i.ibb.co/MygMtfvN/aaa-IMG-20250829-124405.jpg" alt="Fill My Cup">
-                    <h3>Fill My Cup</h3>
-                    <a href="https://www.amazon.com/dp/1665521295" target="_blank" class="btn">Buy on Amazon</a>
+            </div>
+            <div id="particles-js"></div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section content-section bg-white">
+            <div class="container">
+                <h2>Testimonials</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <p>"An inspiring and powerful voice. The words resonate long after you've finished reading."</p>
+                        <cite>- Jane Doe, Literary Critic</cite>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"Stephanie's writing is a gift. She has a unique ability to capture the human spirit."</p>
+                        <cite>- John Smith, Reader</cite>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="container">
-            <h2>Awards &amp; Gallery</h2>
-            <div class="gallery">
-                <img src="https://i.ibb.co/ZpMZRd8V/aaa-IMG-20250829-124401.jpg" alt="International Impact Book Awards">
-                <img src="https://i.ibb.co/HLk7DNV6/aaa-IMG-20250829-124351.jpg" alt="Inspirational Quote">
-                <img src="https://i.ibb.co/C503TMjX/aaa-IMG-20250829-124357.jpg" alt="The Jackson's of St. Landry">
-                <img src="https://i.ibb.co/PvzP03GR/aaa-IMG-20250829-124410.jpg" alt="The Poet Pitre Website Screenshot">
-                <img src="https://i.ibb.co/nsPkmyWR/aaa-IMG-20250829-125312-1.jpg" alt="The Soul of Cenla">
+        <!-- Awards Section -->
+        <section id="awards" class="awards-section content-section bg-dark">
+            <div class="container">
+                <h2>Awards</h2>
+                <div class="gallery">
+                    <img src="https://i.ibb.co/LdQMMCTK/aaa-IMG-20250829-124405.jpg" alt="Award 1">
+                    <img src="https://i.ibb.co/wFXRsNT6/aaa-IMG-20250829-124401.jpg" alt="Award 2">
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="container">
-            <h2>Contact</h2>
-            <p>For professional inquiries, please email: <a href="mailto:contact@stephaniepkirk.com">contact@stephaniepkirk.com</a></p>
-            <p>
-                Follow me on Facebook:
-                <a href="https://www.facebook.com/stephanie.kirk.507" target="_blank">Stephanie P. Kirk</a>
-            </p>
-            <p>
-                Subscribe to my YouTube channel:
-                <a href="https://youtube.com/@spitre71360" target="_blank">Stephanie Pitre Kirk</a>
-            </p>
+        <!-- Social Media Section -->
+        <section id="social" class="social-section content-section bg-white">
+            <div class="container">
+                <h2>Follow Me</h2>
+                <div class="social-grid">
+                    <!-- Placeholder for social media feed -->
+                    <div class="social-item"><img src="https://via.placeholder.com/300x300.png?text=Post+1" alt="Social Media Post 1"></div>
+                    <div class="social-item"><img src="https://via.placeholder.com/300x300.png?text=Post+2" alt="Social Media Post 2"></div>
+                    <div class="social-item"><img src="https://via.placeholder.com/300x300.png?text=Post+3" alt="Social Media Post 3"></div>
+                    <div class="social-item"><img src="https://via.placeholder.com/300x300.png?text=Post+4" alt="Social Media Post 4"></div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="main-footer">
         <div class="container">
             <p>&copy; 2024 Stephanie P. Kirk. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>
